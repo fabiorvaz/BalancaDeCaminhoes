@@ -1,0 +1,1252 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AtuaVer</name>
+    </assembly>
+    <members>
+        <member name="T:Olvebra.AtualizadorVersao.InformacaoVersao">
+            <summary>
+            Contém informações sobre uma versão de programa e a respectiva forma de atualização.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.InformacaoVersao.s_versao">
+            <summary>
+            Flag de número de versão da atualização.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.InformacaoVersao.s_importante">
+            <summary>
+            Flag de importante da atualização.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.InformacaoVersao.s_caminhosAtualizacao">
+            <summary>
+            Caminhos alternativos de atualização disponíveis.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.InformacaoVersao.s_ItemsUrlAtualizacao">
+            <summary>
+            Lista de caminhos alternativos de atualização disponíveis.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.InformacaoVersao.s_nomeArquivoInstalador">
+            <summary>
+            Nome do arquivo executável do instalador.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.InformacaoVersao.s_argumentosInstalador">
+            <summary>
+            Parâmetros de chamada para execução do instalador.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.InformacaoVersao.m_url">
+            <summary>
+            Url de onde a informação de atualização foi obtida.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.InformacaoVersao.m_CanalOrigem">
+            <summary>
+            Canal de origem da informação de versão.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.InformacaoVersao.#ctor">
+            <summary>
+            Criar uma nova instância de informação de versão.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.InformacaoVersao.ObterDaURL(System.String)">
+            <summary>
+            Localiza e carrega a informação de versão apontada pela URL.
+            Retorna null caso a informação não possa ser obtida.
+            </summary>
+            <param name="url">URL apontando para uma informação de versão serializada em arquivo.</param>
+            <returns>A informação de versão lida, ou null caso a informação não possa ser obtida.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.InformacaoVersao.ObterDaURL(Olvebra.AtualizadorVersao.InformacaoVersao.UrlAtualizacao)">
+            <summary>
+            Localiza e carrega a informação de versão apontada pela URL.
+            Retorna null caso a informação não possa ser obtida.
+            </summary>
+            <param name="urlAtualizacao">URL apontando para uma informação de versão serializada em arquivo.</param>
+            <returns>A informação de versão lida, ou null caso a informação não possa ser obtida.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.InformacaoVersao.Salvar(System.String)">
+            <summary>
+            Salva o conteúdo do objeto no arquivo informado.
+            </summary>
+            <param name="nomeArquivo">Nome do arquivo a ser salvo.</param>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.InformacaoVersao.Versao">
+            <summary>
+            Lê/grava a versão do programa.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.InformacaoVersao.Importante">
+            <summary>
+            Lê/grava flag indicando se a atualização é importante. (atualmente NÃO USADO)
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.InformacaoVersao.URLsAtualizacao">
+            <summary>
+            Retorna a lista de URLs possíveis de atualização do programa.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.InformacaoVersao.ItemsUrlAtualizacao">
+            <summary>
+            Retorna a lista de URLs possíveis de atualização do programa.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.InformacaoVersao.NomeInstalador">
+            <summary>
+            Lê/grava o nome do arquivo executável do instalador/atualizador do programa.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.InformacaoVersao.ArgumentosInstalador">
+            <summary>
+            Lê/grava o string que representa os argumentos a serem passados para o instalador/atualizador.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.InformacaoVersao.URL">
+            <summary>
+            Lê/grava a URL de origem de onde o objeto atual foi carregado.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.InformacaoVersao.CanalOrigem">
+            <summary>
+            Canal de origem da informação de versão.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.InformacaoVersao.ToString">
+            <summary>
+            Converte o objeto para String
+            </summary>
+            <returns>Representação textual do string</returns>
+        </member>
+        <member name="T:Olvebra.AtualizadorVersao.InformacaoVersao.UrlAtualizacao">
+            <summary>
+            Representa uma URL de atualização apontando para os dados da atualização.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.InformacaoVersao.UrlAtualizacao.URL">
+            <summary>URL de atualização.</summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.InformacaoVersao.UrlAtualizacao.CanalDistribuicao">
+            <summary>Tipo de versão da URL de atualização.</summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.InformacaoVersao.UrlAtualizacao.#ctor">
+            <summary>
+            Construtor padrão para uma instância vazia.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.InformacaoVersao.UrlAtualizacao.#ctor(System.String)">
+            <summary>
+            Construtor para a URL informada e canal Release.
+            </summary>
+            <param name="url">URL para a informação de atualização.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.InformacaoVersao.UrlAtualizacao.#ctor(System.String,Olvebra.AtualizadorVersao.CanalDistribuicaoEnum)">
+            <summary>
+            Construtor para a URL e o canal informados.
+            </summary>
+            <param name="url">URL para a informação de atualização.</param>
+            <param name="canalDistribuicao">Canal de distribuição de atualização da URL.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.InformacaoVersao.UrlAtualizacao.ToString">
+            <summary>
+            Retorna a representação textual do objeto.
+            </summary>
+            <returns>Representação textual do objeto.</returns>
+        </member>
+        <member name="T:Olvebra.AtualizadorVersao.Atualizador">
+            <summary>
+            Interface principal de acesso ao sistema atualizador de versões.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.Atualizador.ARQUIVO_VERSAO">
+            <summary>
+            Nome padrão do arquivo base de versão contendo as informação de atualização do programa atual.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.Atualizador.PARAM_APP_UPDATED">
+            <summary>
+            Parâmetro recebido pela aplicação chamadora do atualizador, para informar sucesso na 
+            atualização.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.Atualizador.PARAM_APP_NOT_UPDATED">
+            <summary>
+            Parâmetro recebido pela aplicação chamadora do atualizador, para informar erro na 
+            atualização.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.Atualizador.PARAM_APP_UPDATEMSG">
+            <summary>
+            Parâmetro recebido pela aplicação chamadora do atualizador, para informar a mensagem de erro na 
+            atualização. A mensagem de erro segue após o token.
+            Exemplo: -updatemsg "Falha no download do atualizador."
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Atualizador.VersaoDoAtualizador">
+            <summary>
+            Obtém a versão do programa atualizador (FileVersion).
+            </summary>
+            <returns>O número da versão do atualizador, ou "N/D" caso não seja possível obter a informação.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Atualizador.VersaoBase">
+            <summary>
+            Localiza a informação de versão base para o programa atual. O arquivo de informação para a versão base é pesquisado no diretório atual do programa.
+            <exception cref="T:System.Exception">Gera uma Exception caso a informação não possa ser obtida.</exception>
+            </summary>
+            <returns>Informação de versão base atual</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Atualizador.VersaoBase(System.String)">
+            <summary>
+            Localiza a informação de versão base a partir do caminho informado.
+            <exception cref="T:System.Exception">Gera uma Exception caso a informação não possa ser obtida.</exception>
+            </summary>
+            <exception cref="T:System.IO.FileNotFoundException"></exception>
+            <param name="arquivoVersaoBase">Caminho para o arquivo de versão base. Branco/null para obter a versão base padrão.</param>
+            <returns>A informação de versão contida no arquivo.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Atualizador.AtualizacaoDisponivel">
+            <summary>
+            Localiza as atualizações disponíveis para a versão base do programa atual.
+            Retorna a informação sobre a versão mais atual encontrada, ou null caso nenhuma atualização nova seja encontrada.
+            <exception cref="T:System.Exception">Gera uma Exception caso ocorra falha na busca das atualizações.</exception>
+            </summary>		
+            <returns>Informação sobre a versão mais atual encontrada, ou null caso nenhuma atualização seja encontrada.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Atualizador.AtualizacaoDisponivel(System.String)">
+            <summary>
+            Localiza as atualizações disponíveis para a versão base representada no caminho informado.
+            Retorna a informação sobre a versão mais atual encontrada, ou null caso nenhuma atualização nova seja encontrada.
+            <exception cref="T:System.Exception">Gera uma Exception caso ocorra falha na busca das atualizações.</exception>
+            </summary>
+            <param name="arquivoVersaoBase">Caminho para a informação de versão base.</param>
+            <returns>Informação sobre a versão mais atual encontrada, ou null caso nenhuma atualização seja encontrada.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Atualizador.AtualizacaoDisponivel(Olvebra.AtualizadorVersao.InformacaoVersao)">
+            <summary>
+            Localiza as atualizações disponíveis para a versão base representada no caminho informado.
+            Retorna a informação sobre a versão mais atual encontrada, ou null caso nenhuma atualização nova seja encontrada.
+            <exception cref="T:System.Exception">Gera uma Exception caso ocorra falha na busca das atualizações.</exception>
+            </summary>
+            <param name="versaoBase">Versão base para a procura de atualizações.</param>
+            <returns>Informação sobre a versão mais atual encontrada, ou null caso nenhuma atualização seja encontrada.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Atualizador.AtualizacaoDisponivel(Olvebra.AtualizadorVersao.InformacaoVersao,Olvebra.AtualizadorVersao.CanalDistribuicaoEnum)">
+            <summary>
+            Localiza as atualizações disponíveis para a versão base representada no caminho informado.
+            Retorna a informação sobre a versão mais atual encontrada, ou null caso nenhuma atualização nova seja encontrada.
+            <exception cref="T:System.Exception">Gera uma Exception caso ocorra falha na busca das atualizações.</exception>
+            </summary>
+            <param name="versaoBase">Versão base para a procura de atualizações.</param>
+            <param name="filtroCanalDistribuicao">Filtro para o canal de distribuição de versão nova (alfa/beta/release).</param>
+            <returns>Informação sobre a versão mais atual encontrada, ou null caso nenhuma atualização seja encontrada.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Atualizador.AtualizarVersao(Olvebra.AtualizadorVersao.OpcaoAtualizacao)">
+            <summary>
+            Atualiza a versão base atual do programa, usando as opções informadas.
+            O resultado da operação será colocado em opcao.Resultado.
+            Janela de progresso ou MessageBox de aviso podem ser mostrados caso a opção UI esteja ativada.
+            Retorna Verdadeiro/falso se a atualização foi executada com sucesso.
+            </summary>
+            <param name="opcao">Opções de atualização.</param>
+            <returns>Verdadeiro/falso se a atualização foi executada com sucesso.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Atualizador.AtualizarVersaoAsync(System.String,System.Boolean)">
+            <summary>
+            Atualiza a versão base atual do programa, usando as opções informadas.
+            A atualização é feita de maneira assíncrona, através da execução de uma nova instância do executável de atualização.
+            A chamada retorna imediatamente após a criação do novo processo, ou será gerada uma Exception em caso de falha.
+            Idealmente, o programa atual deve ser encerrado, para garantir uma atualização correta dos arquivos em uso.
+            Janela de progresso ou MessageBox de aviso podem ser mostrados pelo novo processo caso a opção UI esteja ativada.
+            A opção ComandoPosAtualizacao pode ser usada para chamar novamente o programa atual ao final da atualização. São passados os parâmetros "-updated" ou "-notupdated" conforme o sucesso ou fracasso da atualização
+            <exception cref="T:System.Exception">Será gerada uma exception em caso de falha.</exception>
+            </summary>
+            <param name="comandoPos">Comando a ser executado após a atualização. São passados os parâmetros "-updated" ou "-notupdated" conforme o sucesso ou fracasso da atualização.</param>
+            <param name="mostrarUI">Indica se janela de progresso e mensagens de aviso devem ser mostradas ao usuário.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Atualizador.AtualizarVersaoAsync(Olvebra.AtualizadorVersao.OpcaoAtualizacao)">
+            <summary>
+            Atualiza a versão base atual do programa, usando as opções informadas.
+            A atualização é feita de maneira assíncrona, através da executação de uma nova instância do executável de atualização.
+            A chamada retorna imediatamente após a criação do novo processo, ou será gerada uma Exception em caso de falha.
+            Idealmente, o programa atual deve ser encerrado, para garantir uma atualização correta dos arquivos em uso.
+            Janela de progresso ou MessageBox de aviso podem ser mostrados pelo novo processo caso a opção UI esteja ativada.
+            A opção ComandoPosAtualizacao pode ser usada para chamar novamente o programa atual ao final da atualização. São passados os parâmetros "-updated" ou "-notupdated" conforme o sucesso ou fracasso da atualização
+            <exception cref="T:System.Exception">Será gerada uma exception em caso de falha.</exception>
+            </summary>
+            <param name="opcao">Opções de atualização.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Atualizador.PrepararAtualizadorStub">
+            <summary>
+            Prepara uma cópia STUB do executável atualizador para execução.
+            Retorna o nome do arquivo executável stub preparado.
+            Gera uma Exception caso não consigua preparar um atualizador STUB para execução.
+            </summary>
+            <returns>O nome do arquivo executável stub preparado.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Atualizador.ObterNomeExecutavelAtualizador">
+            <summary>
+            Obtém o nome do arquivo executável do atualizador.
+            <exception cref="T:System.Exception">Gera uma excessão caso não seja possível determinar o nome do atualizador ou o atualizador não seja encontrado.</exception>
+            </summary>
+            <returns>O caminho para o arquivo executável do atualizador.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Atualizador.ObterNomeExecutavelAtualizadorStub">
+            <summary>
+            Obtém o nome do arquivo executável stub do atualizador. O arquivo stub serve como cópia do arquivo
+            executável original, para permitir que o stub seja executado e arquivo original seja gravado
+            durante uma atualização.
+            <exception cref="T:System.Exception">Gera uma excessão caso não seja possível determinar o nome do atualizador stub ou o atualizador não seja encontrado.</exception>
+            </summary>
+            <returns>O caminho para o arquivo executável do atualizador stub.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Atualizador.LimparTmpsAtualizador">
+            <summary>
+            Limpa os arquivos temporários gerados pela execução do atualizador.
+            </summary>
+        </member>
+        <member name="T:Olvebra.AtualizadorVersao.GerenciadorAtualizacao">
+            <summary>
+            Gerencia a execução do programa de atualização.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.GerenciadorAtualizacao.AtualizarVersao(Olvebra.AtualizadorVersao.OpcaoAtualizacao)">
+            <summary>
+            Executa o instalador/atualizador, conforme as opções informadas.
+            <exception cref="T:System.Exception">Dispara uma Exception em caso de erro na atualização.</exception>
+            </summary>		
+            <param name="opcao">Opções de instalação/atualização.</param>
+            <returns>O resultado da atualização.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.GerenciadorAtualizacao.AtualizarVersao">
+            <summary>
+            Executa o instalador/atualizador, conforme as opções carregadas.
+            Mostra uma interface gráfica de progresso caso configurado nas opções.
+            <exception cref="T:System.Exception">Dispara uma Exception em caso de erro na atualização.</exception>
+            </summary>
+            <returns>O resultado da atualização.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.GerenciadorAtualizacao.ExecutarAtualizacaoThread">
+            <summary>
+            Ponto de início da thread que executa o instalador/atualizador.
+            Faz o download do atualizador para o diretório temporário, executa o programa, anota o resultado, e depois remove o arquivo temporário do atualizador.
+            Em caso de falha, anota no membro Opcao.ResultadoAtualizado.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.GerenciadorAtualizacao.ExecutarAtualizacao">
+            <summary>
+            Ponto de início de execução do instalador/atualizador.
+            Faz o download do atualizador para o diretório temporário, executa o programa, anota o resultado, e depois remove o arquivo temporário do atualizador.
+            Em caso de falha, anota no membro Opcao.ResultadoAtualizado.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.GerenciadorAtualizacao.RemoverInstalador">
+            <summary>
+            Remove o arquivo temporário do atualizador/instalador.
+            Tenta remover até TENTATIVAS_EXCLUSAO_INSTALADOR vezes em caso de erro.
+            Uma falha na remoção NÃO CAUSA um erro de instalação.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.GerenciadorAtualizacao.ExecutarInstalador">
+            <summary>
+            Executa o programa de atualização/instalação baixado, e gerencia a sua execução, anotando o código de retorno.
+            Caso o programa encerre com erro, aguarda INTERVALO_RETRY_RUNUPDATE segundos e tenta novamente (uma vez).
+            Anota na estrutura ResultadoAtualizacao se o atualizador foi executado e encerrou com sucesso.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.GerenciadorAtualizacao.BaixarInstalador">
+            <summary>
+            Baixa uma cópia do atualizador/instalador para o diretório temporário do usuário.
+            Anota na estrutura ResultadoAtualizacao se o download foi concluído com sucesso.
+            </summary>
+            <returns>True/false se o download foi concluído com sucesso.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.GerenciadorAtualizacao.LogFalha(System.String)">
+            <summary>
+            Chamada pelas rotinas internas para notificar uma falha no processo.
+            A falha também é anotada na estrutura de ResultadoAtualizacao.
+            </summary>
+            <param name="msg">Mensagem de texto explicando o motivo da falha.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.GerenciadorAtualizacao.LogMsg(System.String)">
+            <summary>
+            Chamada pelas rotinas internas para notificar sobre o progresso da instalação/atualização.
+            </summary>
+            <param name="msg">Mensagem de texto explicando sobre o andamento do processo.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.GerenciadorAtualizacao.Cancelado">
+            <summary>
+            Verifica se o processo foi cancelado e deve ser finalizado.
+            Registra o cancelamento na estrutura de ResultadoAtualizacao.
+            </summary>
+            <returns>True/false se o processo se encontra cancelado e deve ser finalizado.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.GerenciadorAtualizacao.SetCancelavel(System.Boolean)">
+            <summary>
+            Permite ajustar o andamento do processo como sendo cancelável ou não cancelável pelo usuário.
+            </summary>
+            <param name="cancelavel">True/false se o processo pode ser cancelado pelo usuário.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.GerenciadorAtualizacao.NotifyConcluido">
+            <summary>
+            Chamada pelas rotinas internas para indicar o final do processo.
+            </summary>
+        </member>
+        <member name="T:Olvebra.AtualizadorVersao.CommandLineParser">
+            <summary>
+            Fornece recursos básicos de manipulação/serialização de linha de comando.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.CommandLineParser.SerializarParametro(System.String)">
+            <summary>
+            Serializa um parâmetro informado, caso o mesmo contenha espaços em branco ou aspas.
+            As aspas internas são substituídas por tokens de controle.
+            Use DeSserializarParametro() para obter o parâmetro original.
+            </summary>
+            <param name="valor">Parâmetro a ser serializado.</param>
+            <returns>O parâmetro original, serializado caso necessário.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.CommandLineParser.DeSerializarParametro(System.String)">
+            <summary>
+            Desserializa um parâmetro serializado por SerializarParametro().
+            </summary>
+            <param name="valor">Parâmetro serializado.</param>
+            <returns>Parâmetro original.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.CommandLineParser.ToArgs(System.String)">
+            <summary>
+            Converte uma linha de comando em formato string, para um vetor de strings que representam argumentos de um programa.
+            Leva em consideração as aspas e espaçoes em branco na separação dos comandos.
+            </summary>
+            <param name="linhaComando">Linha de comando.</param>
+            <returns>Vetor de strings contendo os argumentos.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.CommandLineParser.SepararLinhaComando(System.String,System.String@,System.String@)">
+            <summary>
+            Separa uma linha de comando em comando e argumentos.
+            Considera o separador de argumentos como sendo o espaço em branco.
+            Trata as aspas aos pares na parte do comando.</summary>
+            <param name="linhaDeComando">Linha de comando de entrada</param>
+            <param name="comando">Parte equivalente ao comando</param>
+            <param name="argumentos">Argumentos da linha de comando</param>		
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.CommandLineParser.MontarComando(System.String,System.String[])">
+            <summary>
+            Monta um comando com parâmetros, de modo que possa ser passado
+            como parâmetro no campo Olvebra.AtualizadorVersao.OpcaoAtualizacao.ComandoPosAtualizacao
+            </summary>
+            <param name="executavel">Nome do arquivo executável. Pode conter espaços em branco.</param>
+            <param name="parametros">Lista de parâmetros. O parâmetro pode conter espaços em branco.</param>
+            <returns>Retorna o string serializado com o executável e os parâmetros.</returns>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.Forms.FormAtualizador.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Forms.FormAtualizador.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Forms.FormAtualizador.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Olvebra.AtualizadorVersao.OpcaoAtualizacao">
+            <summary>
+            Organiza e centraliza os dados das opções de atualização de versão.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.OpcaoAtualizacao.#ctor">
+            <summary>
+            Criar uma nova instância da estrutura de opção de atualização.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.OpcaoAtualizacao.ArquivoVersaoBase">
+            <summary>
+            Nome do arquivo da versão base, ou branco/null para informar a versão base padrão.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.OpcaoAtualizacao.UI">
+            <summary>
+            Lê/grava o valor indicando se deve mostrar a inteface gráfica durante a atualização.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.OpcaoAtualizacao.Forcar">
+            <summary>
+            Lê/grava o valor indicando se deve forçar a atualização. (atualmente DESATIVADO)
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.OpcaoAtualizacao.ComandoPosAtualizacao">
+            <summary>
+            Lê/grava o valor da linha de comando a ser executada após a atualização. Utilize CommandLineParser.MontarComando para montar o comando.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.OpcaoAtualizacao.NovaVersao">
+            <summary>
+            Informações sobre a nova versão a ser atualizada.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.OpcaoAtualizacao.Resultado">
+            <summary>
+            Informações sobre o resultado da atualização.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.OpcaoAtualizacao.DiretorioBase">
+            <summary>
+            Diretório de base para a execução do atualizador.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.OpcaoAtualizacao.CanalDistribuicao">
+            <summary>
+            Filtro de canal de distribuição para buscar novas versões.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.OpcaoAtualizacao.ParseCanalDistribuicao(System.String)">
+            <summary>
+            Reconhece o valor do filtro de canal de distribuição a partir do string.
+            Retorna canal Release caso não consiga reconhecer a entrada.
+            </summary>
+            <param name="valorFiltro">String de enum de filtro de canal de distribuição.</param>
+            <returns>Canal de distribuição reconhecido, ou Release caso não consiga reconhecer.</returns>
+        </member>
+        <member name="T:Olvebra.AtualizadorVersao.CanalDistribuicaoEnum">
+            <summary>
+            Enum que representa os canais de distribuição de novas atualizações.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.CanalDistribuicaoEnum.Nenhum">
+            <summary>Canal de distribuição desconhecido ou não informado</summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.CanalDistribuicaoEnum.Release">
+            <summary>Canal de distribuição release</summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.CanalDistribuicaoEnum.Alfa">
+            <summary>Canal de distribuição alfa</summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.CanalDistribuicaoEnum.Beta">
+            <summary>Canal de distribuição beta</summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.CanalDistribuicaoEnum.All">
+            <summary>Qualquer canal de distribuição (alfa/beta/release)</summary>
+        </member>
+        <member name="T:Olvebra.AtualizadorVersao.OpcaoExecucao">
+            <summary>
+            Opções de execução do atualizador.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.OpcaoExecucao.RunStub">
+            <summary>
+            Indica se o atualizador deve rodar em modo stub (cópia do executável instalador).
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Program.Main(System.String[])">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Program.Run(System.String)">
+            <summary>
+            Ponto de início da execução do atualizador.
+            </summary>
+            <param name="linhaComando">Parâmetros no formato linha de comando.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Program.Run(System.String[])">
+            <summary>
+            Ponto de início da execução do atualizador.
+            </summary>
+            <param name="args">Parâmetros no formato lista de argumentos.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Program.Processar(Olvebra.AtualizadorVersao.OpcaoAtualizacao)">
+            <summary>
+            Processa os comandos de entrada do atualizador.
+            </summary>
+            <param name="opcao">Opções de atualização.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.Program.Processar(Olvebra.AtualizadorVersao.OpcaoAtualizacao,Olvebra.AtualizadorVersao.OpcaoExecucao)">
+            <summary>
+            Processa os comandos de entrada do atualizador.
+            </summary>
+            <param name="opcao">Opções de atualização.</param>
+            <param name="opcaoExecucao">Opções de execução da atualização.</param>
+        </member>
+        <member name="T:Olvebra.AtualizadorVersao.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.Properties.Resources.IconError">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.Properties.Resources.IconOk">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.Properties.Resources.world_link">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+            </summary>
+        </member>
+        <member name="T:Olvebra.AtualizadorVersao.ResultadoAtualizacao">
+            <summary>
+            Fornece informações sobre o resultado de uma atualização.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.ResultadoAtualizacao.#ctor">
+            <summary>
+            Cria uma nova instância do resultado da atualização.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.ResultadoAtualizacao.Sucesso">
+            <summary>
+            True caso a atualização tenha sido executada com sucesso.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.ResultadoAtualizacao.MotivoFalha">
+            <summary>
+            Em caso de falha no processo, contém a mensagem de erro indicativa da causa da falha.
+            </summary>
+        </member>
+        <member name="T:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML">
+            <summary>
+            Gerenciamento de serialização de contexto XML.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.m_document">
+            <summary>
+            Documento do xml.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.m_node">
+            <summary>
+            Nodo xml equivalente do contexto atual.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.m_element">
+            <summary>
+            Elemento xml equivalente do contexto atual, ou null
+            caso o contexto não represente um elemento xml.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.m_nomeArquivo">
+            <summary>
+            Nome do arquivo de onde o contexto foi carregado.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.#ctor">
+            <summary>
+            Cria um novo contexto XML.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Cria um novo contexto XML.
+            </summary>
+            <param name="nodo">O contexto criado será baseado no nodo XML informado.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.#ctor(System.String)">
+            <summary>
+            Cria um novo contexto XML.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra erro na leitura do xml.</exception>
+            </summary>
+            <param name="nomeArquivo">O contexto criado será baseado no nodo raiz do arquivo XML informado.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.#ctor(System.IO.Stream)">
+            <summary>
+            Cria um novo contexto XML.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra erro na leitura do xml.</exception>
+            </summary>
+            <param name="inStream">O contexto criado será baseado no nodo raiz do stream XML informado.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.Carregar(System.Xml.XmlNode)">
+            <summary>
+            Carrega para o contexto as informações do nodo atual.
+            </summary>
+            <param name="nodo">Nodo a ser carregado para o contexto.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.Carregar(System.String)">
+            <summary>
+            Carrega para o contexto as informações do arquivo XML informado.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra erro na leitura do xml.</exception>
+            </summary>
+            <param name="nomeArquivo">Nome do arquivo XML a ser lido.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.Carregar(System.IO.Stream)">
+            <summary>
+            Carrega para o contexto as informações do arquivo stream XML informado.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra erro na leitura do xml.</exception>
+            </summary>
+            <param name="inStream">Stream de arquivo XML a ser lido.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.Salvar(System.String)">
+            <summary>
+            Salva em um arquivo as informações de contexto.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra erro na gravação do xml.</exception>
+            </summary>
+            <param name="nomeArquivo">Nome no arquivo a serem salvas as informações.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.Salvar">
+            <summary>
+            Salva em um arquivo as informações de contexto.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra erro na gravação do xml.</exception>		/// </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.Document">
+            <summary>
+            Nodo Document do contexto atual.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.Node">
+            <summary>
+            Nodo XML do contexto atual.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.Element">
+            <summary>
+            Nodo Element do contexto atual, ou null caso o contexto não aponte para um elemento XML.
+            </summary>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.NomeArquivo">
+            <summary>
+            Nome do arquivo de origem do contexto atual, ou null caso o contexto não tenho sido carregado de um arquivo.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.CriarContexto(System.String)">
+            <summary>
+            Cria um novo contexto filho do contexto atual.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra erro na criação do contexto.</exception>
+            </summary>
+            <param name="nome">Nome no contexto filho.</param>
+            <returns>O novo contexto criado.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.LocalizarContexto(System.String)">
+            <summary>
+            Localiza um contexto filho.
+            </summary>
+            <param name="nome">Nome do contexto filho a ser localizado.</param>
+            <returns>O contexto filho encontrado, ou null caso não tenha sido encontrado.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.LerSerializavel(System.IO.Stream,Olvebra.AtualizadorVersao.SerializacaoXML.ISerializavelXML)">
+            <summary>
+            Carrega o objeto serializável.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra erro na leitura do XML.</exception>
+            </summary>
+            <param name="inStream">Stream XML de onde serão lidos os dados do objeto serializado.</param>
+            <param name="s">Objeto serializável que receberá os dados lidos.</param>
+            <returns>O contexto raiz usado para carregar os dados, ou null caso não tenham sido carregado dados.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.LerSerializavel(System.String,Olvebra.AtualizadorVersao.SerializacaoXML.ISerializavelXML)">
+            <summary>
+            Carrega o objeto serializável.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra erro na leitura do XML.</exception>
+            </summary>
+            <param name="nomeArquivo">Nome do arquivo xml de onde serão lidos os dados do objeto serializado.</param>
+            <param name="s">Objeto serializável que receberá os dados lidos.</param>
+            <returns>O contexto raiz usado para carregar os dados, ou null caso não tenham sido carregado dados.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.GravarSerializavel(System.String,Olvebra.AtualizadorVersao.SerializacaoXML.ISerializavelXML)">
+            <summary>
+            Grava o objeto serializável.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra erro na gravação do XML.</exception>
+            </summary>
+            <param name="nomeArquivo">Nome do arquivo xml a ser gravado.</param>
+            <param name="s">Objeto que será serializado.</param>
+            <returns>O contexto raiz usado para gravar os dados.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.LerSerializavel(Olvebra.AtualizadorVersao.SerializacaoXML.ISerializavelXML)">
+            <summary>
+            Carrega o objeto serializável.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra erro na leitura do XML.</exception>
+            </summary>
+            <param name="s">Objeto serializável que receberá os dados lidos.</param>
+            <returns>True/false se o carregamento obteve sucesso.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.LerAtributo(System.String)">
+            <summary>
+            Lê um atributo de texto do contexto atual.
+            Retorna String.Empty caso não encontre o atributo informado.
+            <exception cref="T:System.Exception">Gera uma excessão caso o nodo atual não suporte atributos.</exception>
+            </summary>
+            <param name="nome">Nome do atributo.</param>
+            <returns>O valor do atributo lido, ou "" caso o atributo não seja encontrado.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.LerAtributo(System.String,System.String)">
+            <summary>
+            Lê um atributo de texto do contexto atual.
+            <exception cref="T:System.Exception">Gera uma excessão caso o nodo atual não suporte atributos.</exception>
+            </summary>
+            <param name="nome">Nome do atributo.</param>
+            <param name="valorPadrao">Valor padrão a ser usado caso o atributo não seja encontrado.</param>
+            <returns>O valor do atributo lido, ou valorPadrao caso o atributo não seja encontrado.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.LerElemento(System.String)">
+            <summary>
+            Lê um elemento de texto do contexto atual.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra falha na leitura do elemento.</exception>
+            </summary>
+            <param name="nome">Nome do elemento.</param>
+            <returns>O valor do elemento lido, ou "" caso o elemento não seja encontrado.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.LerElemento(System.String,System.String)">
+            <summary>
+            Lê um elemento de texto do contexto atual.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra falha na leitura do elemento.</exception>
+            </summary>
+            <param name="nome">Nome do elemento.</param>
+            <param name="valorPadrao">Valor padrão a ser usado caso o elemento não seja encontrado.</param>
+            <returns>O valor do elemento lido, ou valorPadrao caso o elemento não seja encontrado.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.AdicionarAtributo(System.String,System.String)">
+            <summary>
+            Adiciona um atributo de texto no contexto atual.
+            O atributo só será criado caso o seu valor sejá diferente de "" ou null.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra falha na criação do atributo ou o nodo atual não suporte atributos.</exception>
+            </summary>
+            <param name="nome">Nome do atributo a ser criado.</param>
+            <param name="valor">Valor do atributo.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.AdicionarElemento(System.String,System.String)">
+            <summary>
+            Adiciona um elemento de texto no contexto atual.
+            O elemento só será criado caso o seu valor sejá diferente de "" ou null.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra falha na criação do elemento.</exception>
+            </summary>
+            <param name="nome">Nome do elemento a ser criado.</param>
+            <param name="valor">Valor do elemento.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML.AdicionarSerializavel(Olvebra.AtualizadorVersao.SerializacaoXML.ISerializavelXML)">
+            <summary>
+            Serializa o objeto para dentro do contexto atual.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra falha na serialização do objeto.</exception>
+            </summary>
+            <param name="s">Objeto a ser serializado.</param>
+        </member>
+        <member name="T:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXMLLista">
+            <summary>
+            Gerenciamento de serialização XML de listas.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXMLLista.#ctor(Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML)">
+            <summary>
+            Cria um contexto de lista à partir do contexto informado.
+            </summary>
+            <param name="contexto">Contexto original que será representado como o novo contexto de lista.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXMLLista.CriarContextoLista(Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML,System.String)">
+            <summary>
+            Cria um contexto de lista à partir do contexto informado.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra um erro na criação do contexto.</exception>
+            </summary>
+            <param name="contexto">Contexto original onde será criado o novo contexto.</param>
+            <param name="nomeLista">Nome do contexto de lista a ser criado.</param>
+            <returns>O novo contexto de lista criado.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXMLLista.LocalizarContextoLista(Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML,System.String)">
+            <summary>
+            Localiza um contexto de lista.
+            </summary>
+            <param name="contexto">Contexto original a ser pesquisado.</param>
+            <param name="nomeLista">Nome do contexto de lista a ser encontrado.</param>
+            <returns>O contexto de lista encontrado, ou null caso não seja encontrado.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXMLLista.LerLista(Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML,System.String,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Lê uma lista de um contexto.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra um erro na leitura/carga do contexto/elementos.</exception>
+            </summary>
+            <param name="pai">Contexto pai a ser localizada o contexto de lista.</param>
+            <param name="nomeLista">Nome do contexto de lista a ser localizado.</param>
+            <param name="nomeElemento">Nome dos elementos da lista a serem carregados.</param>
+            <param name="lista">Lista de strings a serem adicionados os elementos.</param>
+            <returns>O contexto de lista usado na carga, ou null caso a lista não seja encotrada.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXMLLista.LerLista(Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML,System.String,System.String,System.Collections.Generic.List{Olvebra.AtualizadorVersao.SerializacaoXML.ISerializavelXML},System.Type)">
+            <summary>
+            Lê uma lista de um contexto.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra um erro na leitura/carga do contexto/elementos.</exception>
+            </summary>
+            <param name="pai">Contexto pai a ser localizada o contexto de lista.</param>
+            <param name="nomeLista">Nome do contexto de lista a ser localizado.</param>
+            <param name="nomeElemento">Nome dos elementos da lista a serem carregados.</param>
+            <param name="lista">Lista de objetos serializáveis a serem adicionados os elementos.</param>
+            <param name="tipoSerializavel">Tipo dos elementos a serem lidos/criados.</param>
+            <returns>O contexto de lista usado na carga, ou null caso a lista não seja encotrada.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXMLLista.LerLista``1(Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML,System.String,System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            Lê uma lista de um contexto.
+            </summary>
+            <typeparam name="T">Tipo de dados dos itens da lista.</typeparam>
+            <param name="pai">Contexto pai a ser localizado o contexto de lista.</param>
+            <param name="nomeLista">Nome do contexto de lista a ser localizado.</param>
+            <param name="nomeElemento">Nome dos elementos da lista a serem carregados.</param>
+            <param name="lista">Lista onde serão adicionados os elementos lidos.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXMLLista.LerLista(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Lê os elementos de uma lista.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra um erro na leitura/carga do contexto/elementos.</exception>
+            </summary>
+            <param name="nomeElemento">Nome dos elementos da lista a serem carregados.</param>
+            <param name="lista">Lista de strings a serem adicionados os elementos.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXMLLista.LerLista(System.String,System.Collections.Generic.List{Olvebra.AtualizadorVersao.SerializacaoXML.ISerializavelXML},System.Type)">
+            <summary>
+            Lê os elementos de uma lista.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra um erro na leitura/carga do contexto/elementos.</exception>
+            </summary>
+            <param name="nomeElemento">Nome dos elementos da lista a serem carregados.</param>
+            <param name="lista">Lista de objetos serializáveis a serem adicionados os elementos.</param>
+            <param name="tipoSerializavel">Tipo dos elementos a serem lidos/criados.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXMLLista.LerLista``1(System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            Lê os elementos de uma lista.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra um erro na leitura/carga do contexto/elementos.</exception>
+            </summary>
+            <typeparam name="T">Tipo de dados dos elementos da lista.</typeparam>
+            <param name="nomeElemento">Nome dos elementos da lista a serem carregados.</param>
+            <param name="lista">Lista onde serão adicionados os elementos lidos.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXMLLista.AdicionarLista(Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML,System.String,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Adiciona uma lista de elementos num contexto.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra um erro na gravação do contexto.</exception>
+            </summary>
+            <param name="pai">Contexto pai a receber o contexto de lista.</param>
+            <param name="nomeLista">Nome do contexto de lista a ser criado.</param>
+            <param name="nomeElemento">Nome dos elementos da lista.</param>
+            <param name="lista">Lista de strings a serem gravados.</param>
+            <returns>O novo contexto de lista usado para gravar a lista.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXMLLista.AdicionarLista(Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML,System.String,System.Collections.Generic.List{Olvebra.AtualizadorVersao.SerializacaoXML.ISerializavelXML})">
+            <summary>
+            Adiciona uma lista de elementos num contexto.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra um erro na gravação do contexto.</exception>
+            </summary>
+            <param name="pai">Contexto pai a receber o contexto de lista.</param>
+            <param name="nomeLista">Nome do contexto de lista a ser criado.</param>
+            <param name="lista">Lista de objetos serializáveis a serem gravados.</param>
+            <returns>O novo contexto de lista usado para gravar a lista.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXMLLista.AdicionarLista(Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML,System.String,System.Collections.Generic.IEnumerable{Olvebra.AtualizadorVersao.SerializacaoXML.ISerializavelXML})">
+            <summary>
+            Adiciona uma lista de elementos num contexto.
+            </summary>
+            <param name="pai">Contexto pai a receber o contexto de lista.</param>
+            <param name="nomeLista">Nome do contexto de lista a ser criado.</param>
+            <param name="lista">Lista items a serem gravados.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXMLLista.AdicionarLista(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Adiciona uma lista de elementos no contexto.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra um erro na gravação dos elementos.</exception>
+            </summary>
+            <param name="nomeElemento">Nome dos elementos a serem gravados.</param>
+            <param name="lista">Lista de strings a serem gravados.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXMLLista.AdicionarLista(System.Collections.Generic.List{Olvebra.AtualizadorVersao.SerializacaoXML.ISerializavelXML})">
+            <summary>
+            Adiciona uma lista de elementos no contexto.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra um erro na gravação dos elementos.</exception>
+            </summary>
+            <param name="lista">Lista de objetos serializáveis a serem gravados.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXMLLista.AdicionarLista(System.Collections.Generic.IEnumerable{Olvebra.AtualizadorVersao.SerializacaoXML.ISerializavelXML})">
+            <summary>
+            Adiciona uma lista de elementos no contexto.
+            <exception cref="T:System.Exception">Gera uma excessão caso ocorra um erro na gravação dos elementos.</exception>
+            </summary>
+            <param name="lista">Lista de objetos serializáveis a serem gravados.</param>
+        </member>
+        <member name="T:Olvebra.AtualizadorVersao.SerializacaoXML.ConversorString">
+            <summary>
+            Conversão de tipos de dados para string, para serialização em xml.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ConversorString.ToInt(System.String)">
+            <summary>
+            Converte o string para int.
+            Se a conversão não puder ser feita, retorna o valo padrão.
+            Caso o valor padrão não seja informado, será usado 0.
+            </summary>
+            <param name="valor">Texto a ser convertido.</param>
+            <returns>O valor convertido, ou o valor padrão caso a conversão não possa ser feita.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ConversorString.ToInt(System.String,System.Int32)">
+            <summary>
+            Converte o string para int.
+            Se a conversão não puder ser feita, retorna o valo padrão.
+            </summary>
+            <param name="valor">Texto a ser convertido.</param>
+            <param name="valorPadrao">Valor padrão a ser retornado caso a conversão falhe.</param>
+            <returns>O valor convertido, ou o valor padrão caso a conversão não possa ser feita.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ConversorString.ToBool(System.String)">
+            <summary>
+            Converte o string para bool.
+            Os seguintes valores são considerados verdadeiros: 1yYsStT. Qualquer outro é considerado falso.
+            </summary>
+            <param name="valor">Texto a ser convertido.</param>
+            <returns>O valor convertido, ou falso caso a conversão não possa ser feita.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ConversorString.ToBool(System.String,System.Boolean)">
+            <summary>
+            Converte o string para bool.
+            Os seguintes valores são considerados verdadeiros: 1yYsStT. Qualquer outro é considerado falso.
+            </summary>
+            <param name="valor">Texto a ser convertido.</param>
+            <param name="valorPadrao">Valor padrão a ser retornado caso o texto contenha null ou "".</param>
+            <returns>O valor convertido, ou o valor padrão caso a conversão não possa ser feita.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ConversorString.FromBool(System.Boolean)">
+            <summary>
+            Converte o valor bool para string. É garantido que o valor convertido poderá ser convertido de volta para bool pelo método ConversorString.ToBool().
+            </summary>
+            <param name="valor">Valor bool a ser convertido para string.</param>
+            <returns>Representação string do valor bool.</returns>
+        </member>
+        <member name="T:Olvebra.AtualizadorVersao.SerializacaoXML.ISerializavelXML">
+            <summary>
+            Possibilita a serialização e desserialização de uma classe qualquer para um XML.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ISerializavelXML.OnGravar(Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML)">
+            <summary>
+            Chamada quando a classe deve armazenar os membros a serem serializados.
+            </summary>
+            <param name="pai">Contexto pai a ser usado para armazenar os dados serializados.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.SerializacaoXML.ISerializavelXML.OnCarregar(Olvebra.AtualizadorVersao.SerializacaoXML.ContextoXML)">
+            <summary>
+            Chamada quando a classe deve recuperar os membros serializados anteriormente.
+            </summary>
+            <param name="pai">Contexto pai a ser usado para recuperar os dados serializados.</param>
+            <returns>True/false se os dados foram recuperados com sucesso.</returns>
+        </member>
+        <member name="T:Olvebra.AtualizadorVersao.TempFileGenerator">
+            <summary>
+            Automatiza e simplifica a geração de nomes de arquivo temporários.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.TempFileGenerator.NomeArquivoTemporario(System.String)">
+            <summary>
+            Gera um nome de arquivo temporário no diretório TEMP do usuáro, com a extensão informada.
+            Retorna null caso não consiga gerar um nome de arquivo único.
+            </summary>
+            <param name="extensao">Extensão do arquivo a ser gerado.</param>
+            <returns>Nome do arquivo.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.TempFileGenerator.NomeArquivoTemporario(System.String,System.String)">
+            <summary>
+            Gera um nome de arquivo temporário no diretório TEMP do usuáro, com a extensão informada.
+            O nomeBase é usado para tentar gerar um nome de arquivo único.
+            Retorna null caso não consiga gerar um nome de arquivo único.
+            </summary>
+            <param name="nomeBase">Nome base para ser incluído no nome do arquivo gerado.</param>
+            <param name="extensao">Extensão do arquivo a ser gerado.</param>
+            <returns>Nome do arquivo.</returns>
+        </member>
+        <member name="T:Olvebra.AtualizadorVersao.utilitario.VersionUpdater">
+            <summary>
+            Classe modelo facilitadora do uso do atualizador de programas.
+            Crie uma classe que herde de VersionUpdater, implemente os métodos
+            abstratos (GetArquivoVersaoBase e LogMsg) e utilize o método
+            IniciarAtualizacao() para facilmente iniciar atualizações
+            com/sem UI e/ou silenciosas/segundo plano.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.MIN_BACKGROUND_REPEAT_MINUTES">
+            <summary>
+            Tempo mínimo de repetição de tentativa de atualização em segundo-plano, em minutos.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.BACKGROUND_UPDATE_DELAY_MS">
+            <summary>
+            Atraso inicial para uma atualização em segundo plano.
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.NIVEL_OK">
+            <summary>
+            Prefixo de mensagem para resultado OK
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.NIVEL_INFO">
+            <summary>
+            Prefixo de mensagem para resultado INFO
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.NIVEL_ERRO">
+            <summary>
+            Prefixo de mensagem para resultado ERRO
+            </summary>
+        </member>
+        <member name="F:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.m_timerBackground">
+            <summary>
+            Usada para iniciar uma atualização em segundo plano com delay.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.GetArquivoVersaoBase">
+            <summary>
+            Obtém o nome do arquivo de configuração de versão base da instalação atual.
+            </summary>
+            <returns>O nome do arquivo de configuração de versão base da instalação atual.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.LogMsg(System.String,System.String)">
+            <summary>
+            Registra uma mensagem de log, com o nível indicado.
+            </summary>
+            <param name="nivel">Pode ser: NIVEL_OK, NIVEL_INFO, NIVEL_ERRO.</param>
+            <param name="mensagem">Mensagem de log</param>
+        </member>
+        <member name="P:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.FiltroCanalDistribuicao">
+            <summary>
+            Filtro de canal de distribuição para as atualizações.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.InformacaoVersaoBase">
+            <summary>
+            Obtém informações sobre a versão base instalada.
+            Gera uma excessão caso a informação de versão base instalada não possa ser consultada.
+            </summary>
+            <returns>informações sobre a versão base instalada.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.InformacaoNovaVersao">
+            <summary>
+            Obtém informações sobre uma nova versão de atualização disponível.
+            Retorna as informações sobre a nova versão encontrada, ou null caso nenhuma versão nova seja encontrada.
+            Gera uma excessão caso a versão atual ou o repositório de versões não possam ser consultados.
+            </summary>
+            <returns>informações sobre a nova versão encontrada, ou null caso nenhuma versão nova seja encontrada.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.TryAtualizarVersao(System.Boolean,System.String)">
+            <summary>
+            Tenta usar a biblioteca "AtualizadorVersao" para atualizar em segundo plano o programa instalado.
+            Retorna true se foi iniciada uma atualização em segundo-plano. Neste caso, o programa deve encerrar imediatamente.
+            <exception cref="T:System.Exception">Gera uma exceção caso ocorra um erro.</exception>
+            </summary>		
+            <param name="mostrarUi">Indica se a interface gráfica deve ser mostrar para o usuário.</param>
+            <param name="linhaComando">Parâmetros adicionais a serem usados para a chamada de volta ao programa após a atualização.</param>
+            <returns>True se foi iniciada uma atualização em segundo-plano. Neste caso, o programa deve encerrar imediatamente.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.MsgOk(System.Boolean,System.String)">
+            <summary>
+            Registra uma mensagem de nivel OK.
+            Mostra a mensagem para o usuário via diálogo caso solicitado.
+            </summary>
+            <param name="mostrarUi">Informa se deve mostrar a mensagem para o usuário.</param>
+            <param name="mensagem">Mensagem de nível OK a ser registrada.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.MsgErro(System.Boolean,System.String)">
+            <summary>
+            Registra uma mensagem de nivel ERRO.
+            Mostra a mensagem para o usuário via diálogo caso solicitado.
+            </summary>
+            <param name="mostrarUi">Informa se deve mostrar a mensagem para o usuário.</param>
+            <param name="mensagem">Mensagem de nível ERRO a ser registrada.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.LogInfo(System.String)">
+            <summary>
+            Registra uma mensagem de nível INFO.
+            </summary>
+            <param name="mensagem">Mensagem de nível INFO a ser registrada.</param>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.CanStartAutomaticBackgroundUpdate">
+            <summary>
+            Testa se uma atualização automática em segundo plano pode ser executada.
+            Verifica se o programa foi chamado a partir do atualizador, e se o tempo mínimo entre tentativas
+            de atualizações foi decorrido.
+            </summary>
+            <returns>True se uma atualização automática em segundo plano pode ser executada.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.GetMinBackgroundRepeatMinutes">
+            <summary>
+            Retorna o tempo mínimo de repetição de tentativa de atualização em segundo-plano, em minutos.
+            Caso ocorra uma tentativa de atualização em segundo-plano repetida antes de decorrido o tempo mínimo
+            </summary>
+            <returns>Tempo mínimo de repetição de tentativa de atualização em segundo-plano, em minutos.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.InternalAtualizarPrograma(System.Boolean,System.String)">
+            <summary>
+            Se encontrada, inicia uma atualização em segundo plano.
+            Se for uma atualização automática em segundo plano, verifica se está
+            dentro do tempo mínimo de verificação de atualizações automáticas.
+            Retorna true caso a atualização tenha sido iniciada. Neste caso, o programa deve encerrar imediatamente.
+            </summary>
+            <param name="mostrarUi">Mostra interface com o usuário.</param>
+            <param name="linhaComando">Parâmetros adicionais na chamada de volta.</param>
+            <returns>True caso a atualização tenha sido iniciada. Neste caso, o programa deve encerrar imediatamente.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.IniciarAtualizacao(System.Boolean)">
+            <summary>
+            Se encontrada, inicia uma atualização em segundo plano.
+            O programa atual é executado de volta ao final da atualização.
+            Retorna true caso a atualização tenha sido iniciada.
+            Neste caso, o programa deve encerrar imediatamente.
+            Caso a atualização seja invisível, testa CanStartAutomaticBackgroundUpdate().
+            </summary>
+            <param name="mostrarUI">Mostra interface com o usuário.</param>
+            <returns>True caso a atualização tenha sido iniciada.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.IniciarAtualizacao(System.Boolean,System.String)">
+            <summary>
+            Se encontrada, inicia uma atualização em segundo plano.
+            O programa atual é executado de volta ao final da atualização.
+            Retorna true caso a atualização tenha sido iniciada.
+            Neste caso, o programa deve encerrar imediatamente.
+            Caso a atualização seja invisível, testa CanStartAutomaticBackgroundUpdate().
+            </summary>
+            <param name="mostrarUI">Mostra interface com o usuário.</param>
+            <param name="parametrosOpcionais">Parâmetros adicionais na chamada de volta.</param>
+            <returns>True caso a atualização tenha sido iniciada.</returns>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.IniciarAtualizacaoBackground">
+            <summary>
+            Agenda uma verificação de atualização em background.
+            Caso encontre uma atualização, a operação padrão
+            (via callback OnBackgroundUpdate) finaliza o programa
+            usando Application.Exit() e inicia o processo de atualização
+            assíncrono sem UI.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.InternalBackgroundUpdate">
+            <summary>
+            Encadeia a execução da rotina de atualização em background.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.OnBackgroundUpdate">
+            <summary>
+            Callback executada para verificar a atualização em segundo plano.
+            A operação padrão finaliza o programa usando Application.Exit() e
+            inicia o processo de atualização assíncrono sem UI.
+            </summary>
+        </member>
+        <member name="M:Olvebra.AtualizadorVersao.utilitario.VersionUpdater.GetFiltroCanalDistribuicao">
+            <summary>
+            Callback executada para retornar o filtro do canal de distribuição de atualização.
+            O retorno padrão é o valor da propriedade FiltroCanalDistribuicao.
+            </summary>
+            <returns>Filtro de canal de distribuição de atualização a aplicado nas operações de atualização.</returns>
+        </member>
+    </members>
+</doc>

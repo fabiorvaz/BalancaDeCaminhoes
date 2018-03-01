@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43D08C6A-7B97-47F7-B3AF-B28215CCE389}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BalancaSolution</RootNamespace>
+    <AssemblyName>BalancaOlvebra</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>FuelTank-Truck-Left-Grey-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AtuaVer">
+      <HintPath>..\..\..\Libs\AtualizadorVersao\AtuaVer.exe</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView">
+      <HintPath>..\..\..\Libs\Fabio\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp">
+      <HintPath>..\..\..\Libs\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.92.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\SQLite\net40_x86\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\AtualizaAPP.cs" />
+    <Compile Include="Lib\Balancas\Toledo\810.cs" />
+    <Compile Include="Lib\Banco\Comando.cs" />
+    <Compile Include="Lib\Banco\Conexao.cs" />
+    <Compile Include="Lib\Banco\Parametros.cs" />
+    <Compile Include="Lib\Banco\Validador.cs" />
+    <Compile Include="Lib\Ferramentas.cs" />
+    <Compile Include="Lib\Log\Log.cs" />
+    <Compile Include="Lib\Relatorio\IRelatorio.cs" />
+    <Compile Include="Lib\Relatorio\Listagem.cs" />
+    <Compile Include="Lib\Relatorio\Relatorio.cs" />
+    <Compile Include="Lib\Relatorio\Ticket.cs" />
+    <Compile Include="Lib\Serial\Comando.cs" />
+    <Compile Include="Telas\Assistente\Assistente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Assistente\Assistente.Designer.cs">
+      <DependentUpon>Assistente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Configuracoes\Configuracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Configuracoes\Configuracoes.Designer.cs">
+      <DependentUpon>Configuracoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\BalancasDummy\Toledo\810.cs" />
+    <Compile Include="Lib\Balancas\Comando.cs" />
+    <Compile Include="Lib\Dados\Carga.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Telas\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Produtos\Produto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Produtos\Produto.Designer.cs">
+      <DependentUpon>Produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Relatorio\Listagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Relatorio\Listagem.Designer.cs">
+      <DependentUpon>Listagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Relatorio\Visualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Relatorio\Visualizar.Designer.cs">
+      <DependentUpon>Visualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Tickets\ListagemAbertos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Tickets\ListagemAbertos.Designer.cs">
+      <DependentUpon>ListagemAbertos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Tickets\ListagemTodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Tickets\ListagemTodos.Designer.cs">
+      <DependentUpon>ListagemTodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Tickets\Manutencao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Tickets\Manutencao.Designer.cs">
+      <DependentUpon>Manutencao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Tickets\Pesagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Tickets\Pesagem.Designer.cs">
+      <DependentUpon>Pesagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Veiculos\Motorista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Veiculos\Motorista.Designer.cs">
+      <DependentUpon>Motorista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Veiculos\Tipo_De_Veiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Veiculos\Tipo_De_Veiculo.Designer.cs">
+      <DependentUpon>Tipo_De_Veiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Veiculos\Transportadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Veiculos\Transportadora.Designer.cs">
+      <DependentUpon>Transportadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Veiculos\Veiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Veiculos\Veiculo.Designer.cs">
+      <DependentUpon>Veiculo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Telas\Assistente\Assistente.resx">
+      <DependentUpon>Assistente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Configuracoes\Configuracoes.resx">
+      <DependentUpon>Configuracoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Produtos\Produto.resx">
+      <DependentUpon>Produto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Relatorio\Listagem.resx">
+      <DependentUpon>Listagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Relatorio\Visualizar.resx">
+      <DependentUpon>Visualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tickets\ListagemAbertos.resx">
+      <DependentUpon>ListagemAbertos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tickets\ListagemTodos.resx">
+      <DependentUpon>ListagemTodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tickets\Manutencao.resx">
+      <DependentUpon>Manutencao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Tickets\Pesagem.resx">
+      <DependentUpon>Pesagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Veiculos\Motorista.resx">
+      <DependentUpon>Motorista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Veiculos\Tipo_De_Veiculo.resx">
+      <DependentUpon>Tipo_De_Veiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Veiculos\Transportadora.resx">
+      <DependentUpon>Transportadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Veiculos\Veiculo.resx">
+      <DependentUpon>Veiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FuelTank-Truck-Left-Grey-icon.ico" />
+    <None Include="Resources\edit-delete-delete x16.png" />
+    <None Include="Resources\save x16.png" />
+    <None Include="Resources\print x16.png" />
+    <None Include="Resources\preview x16.png" />
+    <None Include="Resources\open x16.png" />
+    <None Include="Resources\ok x16.png" />
+    <None Include="Resources\new x16.png" />
+    <None Include="Resources\close x16.png" />
+    <None Include="Resources\cancel x16.png" />
+    <None Include="Resources\document-save-4.png" />
+    <None Include="Resources\Sair x64.png" />
+    <None Include="Resources\fix x64.png" />
+    <None Include="Resources\open box x64.png" />
+    <None Include="Resources\Truck x64.png" />
+    <None Include="Resources\TemplateRelatorioListagem.html" />
+    <None Include="Resources\TemplateRelatorioTicket.html">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

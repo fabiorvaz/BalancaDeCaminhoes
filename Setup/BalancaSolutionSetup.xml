@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<atualizacao>
+  <versao>1.0.0.26</versao>
+  <importante>no</importante>
+  <instalador>BalancaSolutionSetup.exe</instalador>
+  <instalador-args>/SP- /verysilent /log /norestart /SUPPRESSMSGBOXES</instalador-args>
+  <atualizacoes>
+    <url>\\sntolvebra\autoupd\Instaladores\BalancaSolution\BalancaSolutionSetup.xml</url>
+  </atualizacoes>
+</atualizacao>

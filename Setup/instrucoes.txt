@@ -1,0 +1,21 @@
+Para liberar uma versão nova:
+
+-Modificar os programas no Visual Studio normalmente.
+-Testar tudo nos vários ambientes/SO.
+-Quando terminar as modificações, incrementar o número da versão do
+ programa EXE/DLL modificado, dentro do projeto C# no Visual Studio.
+ (Project / Properties / Application / Assembly Information / File
+ Version)
+-Recompilar o projeto (Build Solution), gerando os EXE/DLL novos.
+-Executar o script "atualizar_input.bat" para ler os EXE/DLL novos
+ e colocar os arquivos atualizados em Input/.
+-Executar o script "nova_versao.bat" para incrementar o número de
+ versão do instalador e compilar um EXE de setup novo (que fica
+ no diretório Output/).
+-Executar o script "liberar_versao.bat" para copiar o EXE de setup
+ novo para o servidor (se for o caso, será pedida a senha de
+ \\sntolvebra\discos)
+
+José Antônio - 09.12.2010 11:43
+Feliz Natal!
+

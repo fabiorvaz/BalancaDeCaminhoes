@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<title>
+		</title>
+		<style type="text/css" media="print">
+    @page 
+    {
+        size: auto;   /* auto is the initial value */
+        margin: 0mm;  /* this affects the margin in the printer settings */
+    }
+</style>
+	</head>
+	<body>
+		<div id="Conteudo" style="height:280mm;width:211mm;font-family:Arial;">
+			<div id="Ticket" style="height:40%; margin-top:3%">
+				<div id="cabecalho" style="margin-left:3%;margin-right:3%;">
+					<span style="float:right;">
+						<table>
+							<tr>
+								<td style="font-size:25px;"><strong>Ticket</strong></td>
+								<td style="font-size:25px;"><strong>@numero - @tipo</strong></td>
+							</tr>
+						</table>
+					</span>
+					<h3>OLVEBRA INDUSTRIAL S.A.</h3>
+					<h4>CONFORMIDADE DE PESAGEM - (CFP)</h4>
+				</div>
+				<div id="coluna_esquerda" style="width:45%;float:left;margin-left:3%;">
+					<h4 style="border-style: solid;">Informa&ccedil;&otilde;es de transporte</h4>
+					<table>
+						<tr>
+							<td><strong>Produto</strong></td>
+							<td>@produto</td>
+						</tr>
+						<tr>
+							<td><strong>Procedencia</strong></td>
+							<td>@procedencia</td>
+						</tr>
+						<tr>
+							<td><strong>Destino</strong></td>
+							<td>@destino</td>
+						</tr>
+						<tr>
+							<td><strong>Placa</strong></td>
+							<td>@placa</td>
+						</tr>
+					</table>
+				</div>
+				<div id="coluna_direita" style="width:45%;margin-left:52%;margin-top:43px;margin-right:3%;">
+					<h4 style="border-style: solid;">Informa&ccedil;&otilde;es de pesagem</h4>
+					<table>
+						<tr>
+							<td><strong>Peso bruto</strong></td>
+							<td>@pesobruto</td>
+						</tr>
+						<tr>
+							<td><strong>Data/Hora pesagem</strong></td>
+							<td>@datapesobruto</td>
+						</tr>
+						<tr>
+							<td><strong>Peso tara</strong></td>
+							<td>@pesotara</td>
+						</tr>
+						<tr>
+							<td><strong>Data/Hora pesagem</strong></td>
+							<td>@datapesotara</td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td><h2>Peso liquido</h2></td>
+							<td><h2>@pesoliquido</h2></td>
+						</tr>
+					</table>
+				</div>
+				<div id="rodape" style="margin-left:3%;">
+					<div id="coluna_esquerda" style="width:45%;float:left;">
+						<table>
+							<tr>
+								<td><strong>Volumes</strong></td>
+								<td>@volumes</td>
+							</tr>
+							<tr>
+								<td><strong>Peso da carga</strong></td>
+								<td>@pesovolumes</td>
+							</tr>
+							<tr>
+								<td><strong>Diferen&ccedil;a</strong></td>
+								<td>@diferenca</td>
+							</tr>
+						</table>
+					</div>
+					<div id="coluna_direita" style="width:45%;margin-left:52%;margin-right:3%;">
+						<div id="observacao" style="height: 50px;word-wrap:break-word;overflow:hidden;">
+								<strong>Observa&ccedil;&atilde;o:</strong>@observacao
+						</div>
+					</div>
+				<br />
+				<span style="float:right;text-align:center;margin-right:3%;margin-top:18px;">
+				_____________________________________________________<br />
+				Assinatura
+				</span>
+			</div>
+			</div>
+		
+			<hr style="	border: 1px dotted #ff0000;border-style: none none dotted; margin-top:4%;border-color:black;" />
+			
+			<div id="Ticket" style="height:40%; margin-top:3%">
+				<div id="cabecalho" style="margin-left:3%;margin-right:3%;">
+					<span style="float:right;">
+						<table>
+							<tr>
+								<td style="font-size:25px;"><strong>Ticket</strong></td>
+								<td style="font-size:25px;"><strong>@numero - @tipo</strong></td>
+							</tr>
+						</table>
+					</span>
+					<h3>OLVEBRA INDUSTRIAL S.A.</h3>
+					<h4>CONFORMIDADE DE PESAGEM - (CFP)</h4>
+				</div>
+				<div id="coluna_esquerda" style="width:45%;float:left;margin-left:3%;">
+					<h4 style="border-style: solid;">Informa&ccedil;&otilde;es de transporte</h4>
+					<table>
+						<tr>
+							<td><strong>Produto</strong></td>
+							<td>@produto</td>
+						</tr>
+						<tr>
+							<td><strong>Procedencia</strong></td>
+							<td>@procedencia</td>
+						</tr>
+						<tr>
+							<td><strong>Destino</strong></td>
+							<td>@destino</td>
+						</tr>
+						<tr>
+							<td><strong>Placa</strong></td>
+							<td>@placa</td>
+						</tr>
+					</table>
+				</div>
+				<div id="coluna_direita" style="width:45%;margin-left:52%;margin-top:43px;margin-right:3%;">
+					<h4 style="border-style: solid;">Informa&ccedil;&otilde;es de pesagem</h4>
+					<table>
+						<tr>
+							<td><strong>Peso bruto</strong></td>
+							<td>@pesobruto</td>
+						</tr>
+						<tr>
+							<td><strong>Data/Hora pesagem</strong></td>
+							<td>@datapesobruto</td>
+						</tr>
+						<tr>
+							<td><strong>Peso tara</strong></td>
+							<td>@pesotara</td>
+						</tr>
+						<tr>
+							<td><strong>Data/Hora pesagem</strong></td>
+							<td>@datapesotara</td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td><h2>Peso liquido</h2></td>
+							<td><h2>@pesoliquido</h2></td>
+						</tr>
+					</table>
+				</div>
+				<div id="rodape" style="margin-left:3%;">
+					<div id="coluna_esquerda" style="width:45%;float:left;">
+						<table>
+							<tr>
+								<td><strong>Volumes</strong></td>
+								<td>@volumes</td>
+							</tr>
+							<tr>
+								<td><strong>Peso da carga</strong></td>
+								<td>@pesovolumes</td>
+							</tr>
+							<tr>
+								<td><strong>Diferen&ccedil;a</strong></td>
+								<td>@diferenca</td>
+							</tr>
+						</table>
+					</div>
+					<div id="coluna_direita" style="width:45%;margin-left:52%;margin-right:3%;">
+						<div id="observacao" style="height: 50px;word-wrap:break-word;overflow:hidden;">
+								<strong>Observa&ccedil;&atilde;o:</strong>@observacao
+						</div>
+					</div>
+				<br />
+				<span style="float:right;text-align:center;margin-right:3%;margin-top:18px;">
+				_____________________________________________________<br />
+				Assinatura
+				</span>
+			</div>
+			</div>
+		</div>
+	</body>
+</html>
